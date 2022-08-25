@@ -1,0 +1,8 @@
+server:
+  port: 8002
+
+tencentOss:
+  secretId: AKIDISRBi2B8znNlwufCVaS6XkjRs75nEOHx #SECRETID
+  secretKey: TfcLvFo7AxUkkTv7UozxjGYkhRzJQM4Z #SECRETKEY
+  bucketName: edu-file-1309140759 #指定文件将要存放的存储桶
+  regionArea: ap-guangzhou #地域

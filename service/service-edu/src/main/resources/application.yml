@@ -1,0 +1,43 @@
+# 服务端口
+server:
+  port: 8001
+
+
+spring:
+  application:
+    # 服务名
+    name: service-edu
+  profiles:
+    #环境配置
+    active: dev
+  # 数据源(mysql数据库连接)
+  datasource:
+    type: com.zaxxer.hikari.HikariDataSource
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/guli?serverTimezone=GMT%2B8
+    username: root
+    password: root
+    hikari:
+      connection-test-query: SELECT 1
+      connection-timeout: 60000
+      idle-timeout: 500000
+      max-lifetime: 540000
+      maximum-pool-size: 12
+      minimum-idle: 10
+      pool-name: GuliHikariPool
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+
+#MyBatisPlus全局配置
+mybatis-plus:
+  configuration:
+    # 配置日志信息输出
+#    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+    map-underscore-to-camel-case: true
+  # 引入mapper文件
+  mapper-locations: classpath:/mapper/**.xml
+  global-config: # 全局配置
+    db-config:
+      # 主键生成策略
+      id-type: assign_id
