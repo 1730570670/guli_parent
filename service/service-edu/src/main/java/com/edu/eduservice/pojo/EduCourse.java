@@ -81,16 +81,19 @@ public class EduCourse implements Serializable {
     /**
      * 逻辑删除 1（true）已删除， 0（false）未删除
      */
+    @TableLogic
     private Integer isDeleted;
 
     /**
      * 创建时间
      */
+    @TableField(fill = FieldFill.INSERT)
     private Date gmtCreate;
 
     /**
      * 更新时间
      */
+    @TableField(fill = FieldFill.INSERT_UPDATE)
     private Date gmtModified;
 
     @TableField(exist = false)

@@ -12,6 +12,7 @@ public class CourseObject {
     private String name;//讲师姓名
     private Integer lessonNum;//总课时
     private String oneSubject;//一级分类
+    private String cover;//视频封面
     private String twoSubject;//二级分类
     private String description;//秒速
     private double price;//价格
