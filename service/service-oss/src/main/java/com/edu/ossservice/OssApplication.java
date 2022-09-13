@@ -9,7 +9,7 @@ import org.springframework.context.annotation.ComponentScan;
 /**
  * @CreateTime: 2022-08-22
  */
-@SpringBootApplication(exclude = DataSourceAutoConfiguration.class)//排除数据源的自动装配功能
+@SpringBootApplication(exclude= {DataSourceAutoConfiguration.class})//排除数据源的自动装配功能
 @ComponentScan(basePackages ="com.edu")
 @Slf4j
 public class OssApplication {

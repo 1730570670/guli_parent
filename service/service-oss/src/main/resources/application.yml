@@ -1,8 +1,32 @@
+spring:
+  application:
+    name: oss-service
 server:
   port: 8002
+  #微服务
+  cloud:
+    nacos:
+      server-addr: 192.168.141.128:8847
+      discovery:
+        username: nacos
+        password: nacos
+        namespace: public
+
+
 
 tencentOss:
   secretId: AKIDISRBi2B8znNlwufCVaS6XkjRs75nEOHx #SECRETID
   secretKey: TfcLvFo7AxUkkTv7UozxjGYkhRzJQM4Z #SECRETKEY
   bucketName: edu-file-1309140759 #指定文件将要存放的存储桶
   regionArea: ap-guangzhou #地域
+
+
+
+spring.servlet:
+  multipart:
+    enabled: true
+    max-file-size: 10000MB
+    max-request-size: 10000MB
+
+
+

@@ -11,4 +11,8 @@ import java.io.IOException;
  */
 public interface OssFileService {
     String fileUpload(MultipartFile file) throws IOException;
+
+    String videoFileUpload(MultipartFile file);
+
+    void deleteFile(String url);
 }

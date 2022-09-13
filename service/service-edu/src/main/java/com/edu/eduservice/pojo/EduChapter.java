@@ -7,6 +7,7 @@ import com.baomidou.mybatisplus.annotation.TableName;
 
 import java.io.Serializable;
 import java.util.Date;
+import java.util.List;
 
 import lombok.Data;
 
@@ -33,6 +34,12 @@ public class EduChapter implements Serializable {
      * 章节名称
      */
     private String title;
+
+    /**
+     * 手动赋值
+     */
+    @TableField(exist = false)
+    List<EduVideo> videos;
 
     /**
      * 显示排序
